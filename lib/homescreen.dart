@@ -35,11 +35,11 @@ class _HomescreenState extends State<Homescreen> with TickerProviderStateMixin {
     var w = MediaQuery.of(context).size.width;
     var h = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: (h < (0.45 * w) || w < 700)
+      body: (h < (0.45 * w) || w / h <= 16 / 9)
           ? Container(
               height: h,
               width: w,
-              child: Text("Oops, website not compatible with the device screen. Try rotating your device :("),
+              child: Center(child: Text("Oops, website not compatible with the device screen resolution. This is a desktop only website. Try rotating your device/resizing your browser window and check if it helps :(")),
             )
           : Container(
               child: Stack(
