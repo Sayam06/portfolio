@@ -171,7 +171,7 @@ class _Level4_1State extends State<Level4_1> {
                                         fontSize: w * 0.012,
                                       )),
                                   TextSpan(
-                                      text: " responsible for making the app ass well as the webiste for an upcoming starrtup-educiircle. developed 25+ complex pages of the app using flutter. reduced the loading time of specific pages of the app by almost 1.02 seconds.",
+                                      text: " responsible for making the app as well as the webiste for an upcoming startup-educircle. developed 25+ complex pages of the app using flutter. reduced the loading time of specific pages of the app by almost 1.02 seconds.",
                                       style: TextStyle(
                                         fontFamily: "Joystix",
                                         fontSize: w * 0.012,

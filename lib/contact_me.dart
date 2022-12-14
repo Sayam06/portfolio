@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactMe extends StatefulWidget {
   static const routeName = "/contactMe";
@@ -88,26 +90,62 @@ class _ContactMeState extends State<ContactMe> {
                                     bottom: w * 0.2,
                                     child: Row(
                                       children: [
-                                        Image.asset(
-                                          "assets/images/facebook.png",
-                                          height: w * 0.05,
-                                          fit: BoxFit.cover,
+                                        MouseRegion(
+                                          cursor: SystemMouseCursors.click,
+                                          child: GestureDetector(
+                                            onTap: () async {
+                                              const url = "https://www.facebook.com/sayamgul06/";
+                                              if (await canLaunchUrl(Uri.parse(url)))
+                                                await launchUrl(Uri.parse(url));
+                                              else
+                                                throw "Could not launch $url";
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/facebook.png",
+                                              height: w * 0.05,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
                                         ),
                                         SizedBox(
                                           width: w * 0.06,
                                         ),
-                                        Image.asset(
-                                          "assets/images/instagram.png",
-                                          height: w * 0.05,
-                                          fit: BoxFit.cover,
+                                        MouseRegion(
+                                          cursor: SystemMouseCursors.click,
+                                          child: GestureDetector(
+                                            onTap: () async {
+                                              const url = "https://www.instagram.com/sayyummmmm/";
+                                              if (await canLaunchUrl(Uri.parse(url)))
+                                                await launchUrl(Uri.parse(url));
+                                              else
+                                                throw "Could not launch $url";
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/instagram.png",
+                                              height: w * 0.05,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
                                         ),
                                         SizedBox(
                                           width: w * 0.06,
                                         ),
-                                        Image.asset(
-                                          "assets/images/linkedin.png",
-                                          height: w * 0.05,
-                                          fit: BoxFit.cover,
+                                        MouseRegion(
+                                          cursor: SystemMouseCursors.click,
+                                          child: GestureDetector(
+                                            onTap: () async {
+                                              const url = "https://www.linkedin.com/in/sayam-sarkar-60833b203/";
+                                              if (await canLaunchUrl(Uri.parse(url)))
+                                                await launchUrl(Uri.parse(url));
+                                              else
+                                                throw "Could not launch $url";
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/linkedin.png",
+                                              height: w * 0.05,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
                                         ),
                                       ],
                                     ),

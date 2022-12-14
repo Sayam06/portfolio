@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:portfolio/init.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -124,23 +125,62 @@ class _HomescreenState extends State<Homescreen> with TickerProviderStateMixin {
                           SizedBox(height: w * 0.02),
                           Row(
                             children: [
-                              Image.asset(
-                                "assets/images/facebook.png",
-                                height: w * 0.02,
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: GestureDetector(
+                                  onTap: () async {
+                                    const url = "https://www.facebook.com/sayamgul06/";
+                                    if (await canLaunchUrl(Uri.parse(url)))
+                                      await launchUrl(Uri.parse(url));
+                                    else
+                                      throw "Could not launch $url";
+                                  },
+                                  child: Image.asset(
+                                    "assets/images/facebook.png",
+                                    height: w * 0.02,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
                               SizedBox(
-                                width: 40,
+                                width: w * 0.05,
                               ),
-                              Image.asset(
-                                "assets/images/instagram.png",
-                                height: w * 0.02,
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: GestureDetector(
+                                  onTap: () async {
+                                    const url = "https://www.instagram.com/sayyummmmm/";
+                                    if (await canLaunchUrl(Uri.parse(url)))
+                                      await launchUrl(Uri.parse(url));
+                                    else
+                                      throw "Could not launch $url";
+                                  },
+                                  child: Image.asset(
+                                    "assets/images/instagram.png",
+                                    height: w * 0.02,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
                               SizedBox(
-                                width: 40,
+                                width: w * 0.05,
                               ),
-                              Image.asset(
-                                "assets/images/linkedin.png",
-                                height: w * 0.02,
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: GestureDetector(
+                                  onTap: () async {
+                                    const url = "https://www.linkedin.com/in/sayam-sarkar-60833b203/";
+                                    if (await canLaunchUrl(Uri.parse(url)))
+                                      await launchUrl(Uri.parse(url));
+                                    else
+                                      throw "Could not launch $url";
+                                  },
+                                  child: Image.asset(
+                                    "assets/images/linkedin.png",
+                                    height: w * 0.02,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
                             ],
                           ),

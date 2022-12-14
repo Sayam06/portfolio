@@ -73,6 +73,21 @@ class _Level3_1State extends State<Level3_1> with TickerProviderStateMixin {
                             ),
                           if (selectedPage == 3)
                             Image.asset(
+                              "assets/images/autotx name.png",
+                              height: w * 0.03,
+                            ),
+                          if (selectedPage == 4)
+                            Image.asset(
+                              "assets/images/ratings and more name.png",
+                              height: w * 0.03,
+                            ),
+                          if (selectedPage == 5)
+                            Image.asset(
+                              "assets/images/incovid name.png",
+                              height: w * 0.03,
+                            ),
+                          if (selectedPage == 6)
+                            Image.asset(
                               "assets/images/level cleared.png",
                               height: w * 0.04,
                             ),
@@ -109,7 +124,7 @@ class _Level3_1State extends State<Level3_1> with TickerProviderStateMixin {
                                         ),
                                       ),
                                     Expanded(
-                                      child: selectedPage == 3
+                                      child: selectedPage == 6
                                           ? Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -258,12 +273,15 @@ class _Level3_1State extends State<Level3_1> with TickerProviderStateMixin {
                                                                       else
                                                                         throw "Could not launch $url";
                                                                     },
-                                                                    child: Text(
-                                                                      "doc udi github link",
-                                                                      style: TextStyle(
-                                                                        fontFamily: "Joystix",
-                                                                        fontSize: w * 0.010,
-                                                                        color: Color.fromRGBO(102, 45, 145, 1),
+                                                                    child: MouseRegion(
+                                                                      cursor: SystemMouseCursors.click,
+                                                                      child: Text(
+                                                                        "doc udi github link",
+                                                                        style: TextStyle(
+                                                                          fontFamily: "Joystix",
+                                                                          fontSize: w * 0.010,
+                                                                          color: Color.fromRGBO(102, 45, 145, 1),
+                                                                        ),
                                                                       ),
                                                                     ),
                                                                   )
@@ -327,15 +345,383 @@ class _Level3_1State extends State<Level3_1> with TickerProviderStateMixin {
                                                         ),
                                                       ),
                                                     ),
+                                                  if (selectedPage == 3)
+                                                    Positioned(
+                                                      child: Align(
+                                                        alignment: Alignment.center,
+                                                        child: Container(
+                                                          child: Image.asset(
+                                                            "assets/images/showcase bg.png",
+                                                            height: w * 0.3,
+                                                            fit: BoxFit.contain,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (selectedPage == 3)
+                                                    Positioned(
+                                                      bottom: w * 0.075,
+                                                      left: w * 0.155,
+                                                      child: Container(
+                                                        height: w * 0.2,
+                                                        width: w * 0.5,
+                                                        // color: Colors.white,
+                                                        child: Row(
+                                                          children: [
+                                                            SizedBox(
+                                                              width: w * 0.0195,
+                                                            ),
+                                                            Container(
+                                                              // color: Colors.white,
+                                                              width: w * 0.215,
+                                                              child: Column(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                                children: [
+                                                                  Image.asset(
+                                                                    "assets/images/autotx.png",
+                                                                    height: w * 0.13,
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.02,
+                                                                  ),
+                                                                  GestureDetector(
+                                                                    onTap: () async {
+                                                                      const url = "https://github.com/Sayam06/AutoTx";
+                                                                      if (await canLaunchUrl(Uri.parse(url)))
+                                                                        await launchUrl(Uri.parse(url));
+                                                                      else
+                                                                        throw "Could not launch $url";
+                                                                    },
+                                                                    child: MouseRegion(
+                                                                      cursor: SystemMouseCursors.click,
+                                                                      child: Text(
+                                                                        "autotx github link",
+                                                                        style: TextStyle(
+                                                                          fontFamily: "Joystix",
+                                                                          fontSize: w * 0.010,
+                                                                          color: Color.fromRGBO(102, 45, 145, 1),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              height: w * 0.18,
+                                                              child: Stack(
+                                                                children: [
+                                                                  VerticalDivider(
+                                                                    color: Colors.white,
+                                                                    thickness: w * 0.003,
+                                                                  ),
+                                                                  VerticalDivider(
+                                                                    color: Colors.black,
+                                                                    thickness: w * 0.0015,
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              width: w * 0.03,
+                                                            ),
+                                                            Expanded(
+                                                              child: Column(
+                                                                crossAxisAlignment: CrossAxisAlignment.end,
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: [
+                                                                  Text(
+                                                                    "autotx is a money management application that can automatically detect the transaction amounts from the received bank messages.",
+                                                                    style: TextStyle(
+                                                                      fontFamily: "Joystix",
+                                                                      fontSize: w * 0.007,
+                                                                    ),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.01,
+                                                                  ),
+                                                                  Text(
+                                                                    "the app also shows a colorful graph showing the user where he/she has spent how much amount. Apart from that, the app has all the basic functionalities that any money manager application has.",
+                                                                    style: TextStyle(
+                                                                      fontFamily: "Joystix",
+                                                                      fontSize: w * 0.007,
+                                                                    ),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.01,
+                                                                  ),
+                                                                  Row(
+                                                                    children: [
+                                                                      Text(
+                                                                        "made using flutter.",
+                                                                        style: TextStyle(
+                                                                          fontFamily: "Joystix",
+                                                                          fontSize: w * 0.007,
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (selectedPage == 4)
+                                                    Positioned(
+                                                      child: Align(
+                                                        alignment: Alignment.center,
+                                                        child: Container(
+                                                          child: Image.asset(
+                                                            "assets/images/showcase bg.png",
+                                                            height: w * 0.3,
+                                                            fit: BoxFit.contain,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (selectedPage == 4)
+                                                    Positioned(
+                                                      bottom: w * 0.075,
+                                                      left: w * 0.155,
+                                                      child: Container(
+                                                        height: w * 0.2,
+                                                        width: w * 0.5,
+                                                        // color: Colors.white,
+                                                        child: Row(
+                                                          children: [
+                                                            SizedBox(
+                                                              width: w * 0.0195,
+                                                            ),
+                                                            Container(
+                                                              // color: Colors.white,
+                                                              width: w * 0.215,
+                                                              child: Column(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                                children: [
+                                                                  Image.asset(
+                                                                    "assets/images/ratings and more.png",
+                                                                    height: w * 0.13,
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.02,
+                                                                  ),
+                                                                  GestureDetector(
+                                                                    onTap: () async {
+                                                                      const url = "https://github.com/Sayam06/Ratings-And-More";
+                                                                      if (await canLaunchUrl(Uri.parse(url)))
+                                                                        await launchUrl(Uri.parse(url));
+                                                                      else
+                                                                        throw "Could not launch $url";
+                                                                    },
+                                                                    child: MouseRegion(
+                                                                      cursor: SystemMouseCursors.click,
+                                                                      child: Text(
+                                                                        "ratings & more github link",
+                                                                        style: TextStyle(
+                                                                          fontFamily: "Joystix",
+                                                                          fontSize: w * 0.010,
+                                                                          color: Color.fromRGBO(102, 45, 145, 1),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              height: w * 0.18,
+                                                              child: Stack(
+                                                                children: [
+                                                                  VerticalDivider(
+                                                                    color: Colors.white,
+                                                                    thickness: w * 0.003,
+                                                                  ),
+                                                                  VerticalDivider(
+                                                                    color: Colors.black,
+                                                                    thickness: w * 0.0015,
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              width: w * 0.03,
+                                                            ),
+                                                            Expanded(
+                                                              child: Column(
+                                                                crossAxisAlignment: CrossAxisAlignment.end,
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: [
+                                                                  Text(
+                                                                    "An app that gives Movies/tv show ratings, info, etc at the fingertips of the user. The user can search his/her favourite movie/tv shows and check out all the details.",
+                                                                    style: TextStyle(
+                                                                      fontFamily: "Joystix",
+                                                                      fontSize: w * 0.007,
+                                                                    ),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.01,
+                                                                  ),
+                                                                  Text(
+                                                                    "along with details, the app also shows similar and recommended titles. The app uses the tmdb api.",
+                                                                    style: TextStyle(
+                                                                      fontFamily: "Joystix",
+                                                                      fontSize: w * 0.007,
+                                                                    ),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.01,
+                                                                  ),
+                                                                  Row(
+                                                                    children: [
+                                                                      Text(
+                                                                        "made using flutter.",
+                                                                        style: TextStyle(
+                                                                          fontFamily: "Joystix",
+                                                                          fontSize: w * 0.007,
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (selectedPage == 5)
+                                                    Positioned(
+                                                      child: Align(
+                                                        alignment: Alignment.center,
+                                                        child: Container(
+                                                          child: Image.asset(
+                                                            "assets/images/showcase bg.png",
+                                                            height: w * 0.3,
+                                                            fit: BoxFit.contain,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (selectedPage == 5)
+                                                    Positioned(
+                                                      bottom: w * 0.075,
+                                                      left: w * 0.155,
+                                                      child: Container(
+                                                        height: w * 0.2,
+                                                        width: w * 0.5,
+                                                        // color: Colors.white,
+                                                        child: Row(
+                                                          children: [
+                                                            SizedBox(
+                                                              width: w * 0.0195,
+                                                            ),
+                                                            Container(
+                                                              // color: Colors.white,
+                                                              width: w * 0.215,
+                                                              child: Column(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                                children: [
+                                                                  Image.asset(
+                                                                    "assets/images/incovid.png",
+                                                                    height: w * 0.13,
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.02,
+                                                                  ),
+                                                                  GestureDetector(
+                                                                    onTap: () async {
+                                                                      const url = "https://github.com/Sayam06/in-COVID";
+                                                                      if (await canLaunchUrl(Uri.parse(url)))
+                                                                        await launchUrl(Uri.parse(url));
+                                                                      else
+                                                                        throw "Could not launch $url";
+                                                                    },
+                                                                    child: MouseRegion(
+                                                                      cursor: SystemMouseCursors.click,
+                                                                      child: Text(
+                                                                        "incovid github link",
+                                                                        style: TextStyle(
+                                                                          fontFamily: "Joystix",
+                                                                          fontSize: w * 0.010,
+                                                                          color: Color.fromRGBO(102, 45, 145, 1),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              height: w * 0.18,
+                                                              child: Stack(
+                                                                children: [
+                                                                  VerticalDivider(
+                                                                    color: Colors.white,
+                                                                    thickness: w * 0.003,
+                                                                  ),
+                                                                  VerticalDivider(
+                                                                    color: Colors.black,
+                                                                    thickness: w * 0.0015,
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              width: w * 0.03,
+                                                            ),
+                                                            Expanded(
+                                                              child: Column(
+                                                                crossAxisAlignment: CrossAxisAlignment.end,
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: [
+                                                                  Text(
+                                                                    "incovid was a pan india covid resources app which used to give state wise information about the number of available beds in government and private hospitals, contact details of people who are providing ambulance/food delivery/blood donation services, etc.",
+                                                                    style: TextStyle(
+                                                                      fontFamily: "Joystix",
+                                                                      fontSize: w * 0.007,
+                                                                    ),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.01,
+                                                                  ),
+                                                                  Text(
+                                                                    "during the peak covid time, incovid saw around 10,000+ user count using the app.",
+                                                                    style: TextStyle(
+                                                                      fontFamily: "Joystix",
+                                                                      fontSize: w * 0.007,
+                                                                    ),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    height: w * 0.01,
+                                                                  ),
+                                                                  Text(
+                                                                    "made using flutter, nodejs, react, mongodb, python.",
+                                                                    style: TextStyle(
+                                                                      fontFamily: "Joystix",
+                                                                      fontSize: w * 0.007,
+                                                                    ),
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
                                                 ],
                                               )),
                                     ),
-                                    if (selectedPage == 3)
+                                    if (selectedPage == 6)
                                       Image.asset(
                                         "assets/images/right arrow inactive.png",
                                         height: w * 0.06,
                                       ),
-                                    if (selectedPage != 3)
+                                    if (selectedPage != 6)
                                       GestureDetector(
                                         onTap: () {
                                           if (selectedPage == 2) {
