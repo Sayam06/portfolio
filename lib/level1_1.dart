@@ -79,7 +79,7 @@ class _Level1_1State extends State<Level1_1> {
                                   // color: Colors.black,
                                   width: w * 0.3,
                                   child: Text(
-                                    "I am a third year undergrad student studying computer science and engineering from vellore institute of technology, vellore. i am from the city of joy, Calcutta. I have completed my +2 from delhi public school, ruby park.",
+                                    "I am a final year undergrad student studying computer science and engineering from vellore institute of technology, vellore. i am from the city of joy, Calcutta. I have completed my +2 from delhi public school, ruby park.",
                                     style: TextStyle(
                                       fontFamily: "Joystix",
                                       color: Colors.white,

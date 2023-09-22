@@ -185,20 +185,20 @@ class _Level4_1State extends State<Level4_1> {
                                 child: RichText(
                                     text: TextSpan(children: [
                                   TextSpan(
-                                      text: "this is an upcoming boss battle which will be released after my ",
+                                      text: "I joined the swiss bank - ",
                                       style: TextStyle(
                                         fontFamily: "Joystix",
                                         fontSize: w * 0.012,
                                         color: Colors.white,
                                       )),
                                   TextSpan(
-                                      text: "summer internship at ubs for the summer of 2023",
+                                      text: "ubs as a summer intern, for the summer of 2023",
                                       style: TextStyle(
                                         fontFamily: "Joystix",
                                         fontSize: w * 0.012,
                                       )),
                                   TextSpan(
-                                      text: ". This was an oncampus hire where 16 students were selected from among 3000 applicants. this invloved resume filtering, online assessments as well as 1:1 interviews.",
+                                      text: ". This was an oncampus hire where 16 students were selected from among 3000 applicants. this invloved resume filtering, online assessments as well as 1:1 interviews. As a summer intern, I was involved in writing automation scripts using Java and Selenium, and also worked on CI/CD pipeline for automation testing.",
                                       style: TextStyle(
                                         fontFamily: "Joystix",
                                         fontSize: w * 0.012,
